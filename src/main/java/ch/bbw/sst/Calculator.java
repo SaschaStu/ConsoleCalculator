@@ -18,4 +18,10 @@ public class Calculator {
     }
 
     public int division(int value1, int value2){return value1/value2; };
+
+    protected int hToMin(int value1){return value1*60;}
+
+    private int minToSec(int value1){return value1*60;}
+
+    private int dayToH(int value1){return value1*24;}
 }

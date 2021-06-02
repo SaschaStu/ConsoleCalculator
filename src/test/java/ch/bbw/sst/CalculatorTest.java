@@ -51,4 +51,16 @@ public class CalculatorTest {
     public void testiDivisionUnexpected() throws ArithmeticException{
         assertTrue(testee.division(5,1)==5);
     }
+
+    @Test
+    public void testihToMin(){
+        assertTrue(testee.hToMin(4)==240);
+    }
+
+    //Generell unit testet man keine privaten Methoden direkt
+    //Zwar wäre es indirekt durch Reflections möglich aber das wäre sehr aufwendig.
+    /*@Test
+    public void testiminToSec(){
+        assertTrue(testee.minToSec(3)==180);
+    }*/
 }
