@@ -41,4 +41,14 @@ public class CalculatorTest {
     public void testiSubtraktion1Neg1PosOK(){
         assertTrue(testee.subtraktion(-3,5) == -8);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void testiDivisionExpected(){
+        assertEquals(true,testee.division(1,0));
+    }
+
+    @Test
+    public void testiDivisionUnexpected() throws ArithmeticException{
+        assertTrue(testee.division(5,1)==5);
+    }
 }
