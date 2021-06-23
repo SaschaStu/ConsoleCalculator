@@ -28,6 +28,31 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testiSummeMaxValue(){
+        assertTrue(testee.summe(100, 2000000)< Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testiSummeMinValue(){
+        assertTrue(testee.summe(-100000, -1870000000)> Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testiSumme2Zero(){
+        assertTrue(testee.summe(0,0)== 0);
+    }
+
+    @Test
+    public void testiSumme1Zero1Neg(){
+        assertTrue(testee.summe(0,-1)==-1);
+    }
+
+    @Test
+    public void testiSumme1Zero1Pos(){
+        assertTrue(testee.summe(0,1)==1);
+    }
+
+    @Test
     public void testiSubtraktion2PosOK() {
         assertTrue(testee.subtraktion(25,10)==15);
     }
@@ -42,6 +67,31 @@ public class CalculatorTest {
         assertTrue(testee.subtraktion(-3,5) == -8);
     }
 
+    @Test
+    public void testiSubtraktion2Zero(){
+        assertTrue(testee.subtraktion(0,0)==0);
+    }
+
+    @Test
+    public void testiSubtraktion1Zero1Neg(){
+        assertTrue(testee.subtraktion(0,-1)==1);
+    }
+
+    @Test
+    public void testiSubtraktion1Zero1Pos(){
+        assertTrue(testee.subtraktion(0,1)==-1);
+    }
+
+    @Test
+    public void testiSubtraktionMinValue(){
+        assertTrue(testee.subtraktion(1000,10000000)> Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testiSubtraktionMaxValue(){
+        assertTrue(testee.subtraktion(1000,-10000)<Integer.MAX_VALUE);
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testiDivisionExpected(){
         assertEquals(true,testee.division(1,0));
@@ -53,8 +103,38 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testiDivision2Pos(){
+        assertTrue(testee.division(4,2)==2);
+    }
+
+    @Test
+    public void testiDivision2Neg(){
+        assertTrue(testee.division(-9,-3)==3);
+    }
+
+    @Test
+    public void testiDivision1Neg1Pos(){
+        assertTrue(testee.division(-9,3)==-3);
+    }
+
+    @Test
+    public void testiDivison1Zero1Neg(){
+        assertTrue(testee.division(0,-3)==0);
+    }
+
+    @Test
+    public void testiDivision1Zero1Pos(){
+        assertTrue(testee.division(0,187)==0);
+    }
+
+    @Test
     public void testihToMin(){
         assertTrue(testee.hToMin(4)==240);
+    }
+
+    @Test
+    public void testidayToH(){
+        assertTrue(testee.dayToH(12)==288);
     }
 
     //Generell unit testet man keine privaten Methoden direkt
