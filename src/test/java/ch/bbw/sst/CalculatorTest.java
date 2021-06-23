@@ -67,6 +67,31 @@ public class CalculatorTest {
         assertTrue(testee.subtraktion(-3,5) == -8);
     }
 
+    @Test
+    public void testiSubtraktion2Zero(){
+        assertTrue(testee.subtraktion(0,0)==0);
+    }
+
+    @Test
+    public void testiSubtraktion1Zero1Neg(){
+        assertTrue(testee.subtraktion(0,-1)==1);
+    }
+
+    @Test
+    public void testiSubtraktion1Zero1Pos(){
+        assertTrue(testee.subtraktion(0,1)==-1);
+    }
+
+    @Test
+    public void testiSubtraktionMinValue(){
+        assertTrue(testee.subtraktion(1000,10000000)> Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testiSubtraktionMaxValue(){
+        assertTrue(testee.subtraktion(1000,-10000)<Integer.MAX_VALUE);
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testiDivisionExpected(){
         assertEquals(true,testee.division(1,0));
