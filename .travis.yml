@@ -1,5 +1,5 @@
 language: java
-script: mvn install
+script: mvn deploy
 deploy:
   provider: releases
   api_key:
