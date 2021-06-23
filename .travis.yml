@@ -1,2 +1,9 @@
 language: java
 script: mvn install
+deploy:
+  provider: releases
+  file:
+  "/home/travis/.m2/repository/ch/bbw/sst/ConsoleCalculator/1.0-SNAPSHOT/ConsoleCalculator-1.0-SNAPSHOT.jar"
+  skip_cleanup: true
+  on:
+    tags: true
