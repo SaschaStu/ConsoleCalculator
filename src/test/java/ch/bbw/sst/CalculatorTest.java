@@ -28,6 +28,31 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testiSummeMaxValue(){
+        assertTrue(testee.summe(100, 2000000)< Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testiSummeMinValue(){
+        assertTrue(testee.summe(-100000, -1870000000)> Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testiSumme2Zero(){
+        assertTrue(testee.summe(0,0)== 0);
+    }
+
+    @Test
+    public void testiSumme1Zero1Neg(){
+        assertTrue(testee.summe(0,-1)==-1);
+    }
+
+    @Test
+    public void testiSumme1Zero1Pos(){
+        assertTrue(testee.summe(0,1)==1);
+    }
+
+    @Test
     public void testiSubtraktion2PosOK() {
         assertTrue(testee.subtraktion(25,10)==15);
     }
