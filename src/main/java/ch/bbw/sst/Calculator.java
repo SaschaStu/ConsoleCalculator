@@ -23,6 +23,6 @@ public class Calculator {
 
     private int minToSec(int value1){return value1*60;}
 
-    private int dayToH(int value1){return value1*24;}
+    int dayToH(int value1){return value1*24;}
     //test
 }

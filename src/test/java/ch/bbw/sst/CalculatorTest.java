@@ -103,8 +103,38 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testiDivision2Pos(){
+        assertTrue(testee.division(4,2)==2);
+    }
+
+    @Test
+    public void testiDivision2Neg(){
+        assertTrue(testee.division(-9,-3)==3);
+    }
+
+    @Test
+    public void testiDivision1Neg1Pos(){
+        assertTrue(testee.division(-9,3)==-3);
+    }
+
+    @Test
+    public void testiDivison1Zero1Neg(){
+        assertTrue(testee.division(0,-3)==0);
+    }
+
+    @Test
+    public void testiDivision1Zero1Pos(){
+        assertTrue(testee.division(0,187)==0);
+    }
+
+    @Test
     public void testihToMin(){
         assertTrue(testee.hToMin(4)==240);
+    }
+
+    @Test
+    public void testidayToH(){
+        assertTrue(testee.dayToH(12)==288);
     }
 
     //Generell unit testet man keine privaten Methoden direkt
